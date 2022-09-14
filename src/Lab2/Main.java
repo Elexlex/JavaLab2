@@ -13,7 +13,7 @@ public class Main {
         input(number, cart);
         do {
             output(cart);
-        System.out.print("\n\n1. Summary of your cart\n2. Increasing a price by 15%\n3. Decreasing price by 30%\n4. Delete last item\n5. Add a new item\n6. Exit\n- ");
+        System.out.print("\n\n1. The amount of your cart\n2. Increasing a price by 15%\n3. Decreasing price by 30%\n4. Delete last item\n5. Add a new item\n6. Exit\n- ");
         menu = num.nextInt();
         switch (menu){
             case 1:

@@ -15,28 +15,28 @@ public class Cart {
         return itemQuantity;
     }
     public void addItem(Item item){
+        if (checkStackFull())
+            return;
         add(item);
     }
     private void add(Item item){
-        if (checkStackFull())
-            return;
         stack[itemQuantity] = item;
         itemQuantity++;
     }
     public void deleteItem(){
+        if (checkStackEmpty())
+            return;
         delete();
     }
     private void delete(){
-        if (checkStackEmpty())
-            return;
         itemQuantity--;
     }
     public void priceSummary(){
+        if (checkStackEmpty())
+            return;
         summary();
     }
     private void summary(){
-        if (checkStackEmpty())
-            return;
         float sum = 0;
         for (Item item : stack)
             sum+=item.getPrice();
